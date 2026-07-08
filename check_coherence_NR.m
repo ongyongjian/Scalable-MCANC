@@ -104,7 +104,7 @@ for m = 1:M
     if J == 1
         % ---- Single reference: use MATLAB's built-in mscohere directly ----
         % mscohere returns |S_dx|^2/(S_dd*S_xx) = ordinary coherence, exactly
-        % the quantity we need. (Per Prof Gan: prefer validated built-ins.)
+        % the quantity we need. 
         C_dx = mscohere(d_m, x(1,:), win, noverlap, nfft, fs);   % [Nf x 1]
     else
         % ---- Multiple references: multiple coherence (no MATLAB built-in) ----
